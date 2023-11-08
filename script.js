@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", loadTasks);
 function loadTasks() {
     const todoList = document.getElementById("todo-list");
@@ -13,7 +14,7 @@ function createTaskElement(task, index) {
     taskItem.classList.add("task-item");
     taskItem.innerHTML = `
         <span class="item-text" contenteditable="true" oninput="editTask(${index}, this)">${task}</span>
-        <button class="delete-button" onclick="deleteTask(${index})">Delete</button>
+        <button type="button" class="btn-success" onclick="deleteTask(${index})">Delete</button>
     `;
     return taskItem;
 }
